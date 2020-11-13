@@ -1,0 +1,75 @@
+.banner{
+    height:50vh;
+    margin-top:100px;
+    @include media(">=phone") {
+        margin-top:120px;
+    }
+    @include media(">=tablet") {
+        margin-top:150px;
+    }
+    .container{
+        .slogan{
+            h1{
+                line-height: 30px;
+                span{
+                    font-size:26px;
+                    font-weight: 900;
+                    @include media(">=phone") {
+                        font-size:35px;
+                    }
+                    @include media(">=tablet") {
+                        font-size:50px;
+                    }
+                }
+                @include media(">=phone") {
+                    line-height: 40px;
+                }
+                @include media(">=tablet") {
+                    line-height: 50px;
+                }
+            }  
+        }
+        .moreAboutUs{
+            margin-top: 16px;
+            @include media(">=phone") {
+                margin-top: 30px;
+            }
+            a{
+                cursor: pointer;
+                h2{
+                    font-size:20px;
+                    font-weight: 400;
+                    @include media(">=phone") {
+                        font-size:25px;
+                    }
+                }
+                svg{
+                    border: 2px solid black;
+                    width:25px;
+                    height:25px;
+                    padding: 2px;
+                    border-radius: 100%;
+                    margin-left:10px;
+                    transition: all .1s ease-in;
+                    @include media(">=phone") {
+                        width:35px;
+                        height:35px;
+                        padding: 4px;
+                    }
+                    @include media(">=tablet") {
+                        width:50px;
+                        height:50px;
+                        padding: 12px;
+                    }
+                }
+                &:hover{
+                    svg{
+                        background: black;
+                        color:white
+                    }
+                }
+            }
+
+        }
+    }
+}
