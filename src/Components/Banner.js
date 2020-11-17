@@ -6,8 +6,16 @@ export default function Banner() {
         <div className="banner">
            <div className="container">
                 <div className="slogan">
-                    <h1><span>Creating unique brands is</span></h1>
-                    <h1><span>what we do</span></h1>
+                    <h1>
+                        <div>
+                            <span>Nothing comes between </span>
+                        </div>
+                        <div>
+                            <span>me and my studio.</span>
+                        </div>                       
+         
+                    </h1>
+     
                 </div>
                 <div className="moreAboutUs">
                     <a className="row v-center">

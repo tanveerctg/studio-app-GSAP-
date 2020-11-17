@@ -1,13 +1,15 @@
 
-import Header from './Components/Header.js'
-import Banner from './Components/Banner.js'
 import './styles/App.scss'
+import Header from './Components/Header'
+import Home from './Pages/Home'
 
 function App() {
+
+
   return (
     <div>
       <Header/>
-      <Banner/>
+      <Home/>
     </div>
   );
 }

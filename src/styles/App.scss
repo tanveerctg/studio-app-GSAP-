@@ -2,6 +2,8 @@
 @import "./breakpoint.scss";
 @import "./components/header.scss";
 @import "./components/banner.scss";
+@import "./components/cases.scss";
+@import "./components/introoverlay.scss";
 
 *{
     margin:0;
@@ -9,6 +11,9 @@
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 10px;
+}
+.App{
+    position: relative;
 }
 .container{
     max-width: 1560px;

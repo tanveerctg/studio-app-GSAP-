@@ -1,36 +1,54 @@
 .banner{
     height:50vh;
-    margin-top:100px;
-    @include media(">=phone") {
-        margin-top:120px;
-    }
-    @include media(">=tablet") {
-        margin-top:150px;
-    }
+    width: 100%;
+    background-color: white;
     .container{
+        position: relative;
+        z-index: 45;
+        top:60%;
+        color: white;
+        transform: translateY(-60%);
+        mix-blend-mode: difference;
         .slogan{
             h1{
                 line-height: 30px;
-                span{
-                    font-size:26px;
-                    font-weight: 900;
-                    @include media(">=phone") {
-                        font-size:35px;
-                    }
-                    @include media(">=tablet") {
-                        font-size:50px;
-                    }
-                }
-                @include media(">=phone") {
-                    line-height: 40px;
-                }
                 @include media(">=tablet") {
-                    line-height: 50px;
+                    line-height: 70px;
                 }
+                div{
+                    height:40px;
+                    overflow: hidden;
+                    @include media(">=tablet") {
+                        height:70px;
+                        height:56px;
+                    }
+                    span{
+                        display: inline-block;
+                        // transform: translateY(-100%);
+                        font-size:26px;
+                        font-weight: 900;  
+       
+                        @include media(">=phone") {
+                            font-size:38px;
+                        }
+                        @include media(">=tablet") {
+                            font-size:50px;
+                            height:60px;
+                        }
+                    }   
+                }
+                // @include media(">=phone") {
+                //     line-height: 40px;
+                // }
+                // @include media(">=tablet") {
+                //     line-height: 50px;
+                // }
             }  
         }
         .moreAboutUs{
+            display: inline-block;
             margin-top: 16px;
+            opacity:0;
             @include media(">=phone") {
                 margin-top: 30px;
             }
@@ -64,8 +82,8 @@
                 }
                 &:hover{
                     svg{
-                        background: black;
-                        color:white
+                        background: white;
+                        color:black
                     }
                 }
             }
