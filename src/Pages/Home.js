@@ -5,8 +5,8 @@ import Cases from '../Components/Cases.js'
 import IntroOverlay from '../Components/IntroOverlay.js'
 import gsap from 'gsap'
 
-export default function Home() {
-    console.log(gsap)
+export default function Home({navOpen}) {
+
     useEffect(() => {
       const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
   
@@ -23,10 +23,10 @@ export default function Home() {
     }, [])
 
     return (
-        <>
+        <div>
          <Banner/>
          <Cases/>
          <IntroOverlay/>           
-        </>
+        </div>
     )
 }

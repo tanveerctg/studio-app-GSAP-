@@ -1,31 +1,74 @@
-.header{
-    padding: 50px 0;
-    width:100%;
+.header {
+  padding: 50px 0;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 60;
+  @include media("<=370px") {
+    padding: 20px 0;
+  }
+  .container {
     justify-content: space-between;
-    position: fixed;
-    top:0;
-    z-index: 2;
-    .container{
-        justify-content: space-between;
-        .logo{
-            font-size:21px;
-            letter-spacing: 5px;
-            text-transform: uppercase;;
-            font-weight: 600;
-        }
-        .hamburger{
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            span{
-                width:25px;
-                height:2px;
-                background: black;
-                &:nth-child(1){
-                    margin-bottom:5px;
-                }
-            }
-        }
+    align-items: center;
+    height: 70px;
+    max-height: 100%;
+    .logo {
+      font-size: 21px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
     }
-
+    .navBtnContainer {
+      position: relative;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .hamburger {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        span {
+          width: 25px;
+          height: 2px;
+          background: black;
+          &:nth-child(1) {
+            margin-bottom: 5px;
+          }
+        }
+      }
+      .closeNavBtn {
+        display: none;
+        cursor: pointer;
+        svg {
+          #circle {
+            stroke-dasharray: 200.73px;
+            stroke-dashoffset: 200.73px;
+          }
+          #Path_1 {
+            stroke-dasharray: 6.46px;
+            stroke-dashoffset: 6.46px;
+          }
+          #Path_2 {
+            stroke-dasharray: 6.46px;
+            stroke-dashoffset: 6.46px;
+          }
+          #Line_1 {
+            stroke-dasharray: 14.9px;
+            stroke-dashoffset: 14.9px;
+          }
+          @include media("<=tablet") {
+            width: 56px;
+          }
+          @include media("<=phone") {
+            width: 48px;
+          }
+        }
+      }
+    }
+  }
 }
